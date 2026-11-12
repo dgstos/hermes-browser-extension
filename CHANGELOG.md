@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Removed stale models stay cleared from the model picker after a provider list changes. Refreshing `/api/model/options` now replaces each returned provider's entries in the cross-profile cache instead of keeping removed models from other profiles, allows manual refreshes more time before falling back to cache, resolves `provider::`-prefixed and OpenAI OSS (`128k`) context windows accurately, and keeps model context badges unclipped in the picker menu.
+
 ## [0.4.1] - 2026-11-12
 
 ### Added
